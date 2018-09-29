@@ -57,6 +57,12 @@ app.get('/about', (req, res)=>{
         // currentYear: new Date().getFullYear()
     }); 
 });
+app.get('/project', (req, res)=>{
+    // res.send('About Page')
+    res.render('project.hbs', { // render for any template setup (handlebars)
+        pageTitle: 'Project Page',
+    }); 
+});
 app.get('/bad', (req, res)=>{
     res.send(
         // 'Opps.. error just occured', 
