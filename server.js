@@ -24,11 +24,11 @@ app.use((req, res, next)=>{
     // console.log(`${now}: ${req.method} ${req.url}`);
     next();
 });
-app.use((req, res, next)=>{
-    res.render('maintenance.hbs', {
-        pageTitle: 'Maintenance Page'
-    })
-});
+// app.use((req, res, next)=>{
+//     res.render('maintenance.hbs', {
+//         pageTitle: 'Maintenance Page'
+//     })
+// });
 app.use(express.static(__dirname + '/public'));
 
 hbs.registerHelper('getCurrentYear', ()=>{
